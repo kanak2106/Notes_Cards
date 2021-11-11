@@ -1,0 +1,114 @@
+*
+{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+    justify-content: center;
+    align-items: center;
+    background: #f7fcff;
+    display:  flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     
+}
+.container .card
+{
+    position: relative;
+    width: 245px;
+    height: 280px;
+    margin: auto;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 10px;
+   
+    flex: 0 1 74%;
+    margin: 1rem .25em;
+}
+.container .card:hover
+{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.container .card img
+{
+    max-width: 100%;
+}
+.container .card .front
+{
+    position: absolute;
+    text-align: center;
+    transition: 0.5s;
+    transform: scale(1);
+}
+.container .card .front .card-image
+{
+    width: 245px;
+    height: 280px;
+}
+.container .card:hover .front
+{
+    transform: scale(1);
+}
+.container .card .content
+{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform: scale(1) translateY(calc(100% - 15%));
+}
+.container .card .content .about
+{
+    padding: 5px 10px;
+}
+.container .card .content .heading
+{
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.container .card:hover .content
+{
+    transform: scale(1);
+}
+.container .card .content a
+{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4px;
+    position: relative;
+}
+.container .card .content a:before{
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -4px;
+    height: 20px;
+    width: 100%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transform: scaleY(2);
+    transition: 0.5s;
+    opacity: 0;
+}
+.container .card .content a:hover:before{
+    transform: scaleY(1);
+    opacity: 1;
+}
